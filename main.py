@@ -7,15 +7,15 @@ def main():
   char_dict = get_chars_dict(book_text)
   print_report(book_path, words_count, char_dict)
   
-def get_book_text(book_path: str):
+def get_book_text(book_path):
   with open(book_path) as f:
     file_contents = f.read()
     return file_contents
 
-def get_words_count(text: str):
+def get_words_count(text):
   return len(text.split())
 
-def get_chars_dict(text: str):
+def get_chars_dict(text):
   letters = {}
   lcase_string = text.lower()
   for char in lcase_string:
