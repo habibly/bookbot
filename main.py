@@ -6,9 +6,6 @@ def main():
   words_count = get_words_count(book_text)
   char_dict = get_chars_dict(book_text)
   print_report(book_path, words_count, char_dict)
- 
-  # print(words_count, char_dict)
-  # print()
   
 def get_book_text(book_path: str):
   with open(book_path) as f:
@@ -16,7 +13,7 @@ def get_book_text(book_path: str):
     return file_contents
 
 def get_words_count(text: str):
-  return len(text.split()) #whitespace is the default separator in split
+  return len(text.split())
 
 def get_chars_dict(text: str):
   letters = {}
@@ -48,9 +45,6 @@ def print_report(book_path, words_count, char_dict):
   total_words_found = f"{words_count} words found in the document\n"
   footer = "--- End report ---"
   char_sorted_list = char_dict_to_sorted_list(char_dict)
-
-  # print(char_dict_list)
-
   
   print(header)
   print(total_words_found)
